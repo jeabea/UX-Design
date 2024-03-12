@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="localisation">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="order">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="categories">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="burger">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="pizza">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="note">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="burger_name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="burger_text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#0D0D0D</item>
+        <item name="android:fontFamily">@font/dm_sans_regular</item>
+    </style>
+
+    <style name="prix">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF9431</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+    </style>
+
+    <style name="prix_2">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#FF9431</item>
+        <item name="android:fontFamily">@font/dm_sans_light</item>
+    </style>
+
+
+</resources>
