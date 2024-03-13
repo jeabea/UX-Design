@@ -1,9 +1,12 @@
 package com.example.projetappdesignv2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 
 
 
@@ -30,5 +33,14 @@ class MainActivity3 : AppCompatActivity() {
                 textViewCounter.text = counterValue.toString()
             }
         }
+        val buttonGoToNextPage: Button = findViewById(R.id.buttonGoToNextPage)
+        buttonGoToNextPage.setOnClickListener {
+            val intent = Intent(this, MainActivity4::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 }
+
