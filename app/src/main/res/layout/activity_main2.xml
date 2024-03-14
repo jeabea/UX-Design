@@ -200,6 +200,16 @@
             app:layout_constraintStart_toEndOf="@+id/burger"
             app:layout_constraintTop_toTopOf="@+id/rectangle_burger" />
 
+        <Button
+            android:id="@+id/button_transparent_pizza"
+            android:layout_width="112dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:elevation="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/rectangle_sandwich"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_burger"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/rectangle_pizza"
             android:layout_width="wrap_content"
@@ -233,6 +243,16 @@
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_pizza"
             app:layout_constraintStart_toEndOf="@+id/pizza"
             app:layout_constraintTop_toTopOf="@+id/rectangle_pizza" />
+
+        <Button
+            android:id="@+id/button_transparent_sandwich"
+            android:layout_width="112dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:elevation="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/rectangle_sandwich"
