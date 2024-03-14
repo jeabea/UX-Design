@@ -35,7 +35,7 @@ class MainActivity3 : AppCompatActivity() {
         }
         val buttonGoToNextPage: Button = findViewById(R.id.buttonGoToNextPage)
         buttonGoToNextPage.setOnClickListener {
-            val intent = Intent(this, MainActivity4::class.java).apply {
+            val intent = Intent(this, MainActivity6::class.java).apply {
                 putExtra("compteurValue", counterValue)
                 intent.putExtra("articleId", "Article1")
             }

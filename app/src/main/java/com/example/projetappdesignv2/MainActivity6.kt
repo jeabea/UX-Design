@@ -7,12 +7,12 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 
-class MainActivity4 : AppCompatActivity() {
+class MainActivity6 : AppCompatActivity() {
 
     private var counterValue = 1 // Initialiser avec une valeur par défaut
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main4)
+        setContentView(R.layout.activity_main6)
 
         // Vérifier si l'intent contient l'indicateur que le bouton a été cliqué
         val boutonClique = intent.getBooleanExtra("boutonClique", false)
