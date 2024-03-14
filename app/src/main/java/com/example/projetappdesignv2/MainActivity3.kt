@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
+
 
 
 
@@ -35,7 +35,10 @@ class MainActivity3 : AppCompatActivity() {
         }
         val buttonGoToNextPage: Button = findViewById(R.id.buttonGoToNextPage)
         buttonGoToNextPage.setOnClickListener {
-            val intent = Intent(this, MainActivity4::class.java)
+            val intent = Intent(this, MainActivity4::class.java).apply {
+                putExtra("compteurValue", counterValue)
+                intent.putExtra("articleId", "Article1")
+            }
             startActivity(intent)
         }
 
