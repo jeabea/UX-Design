@@ -307,7 +307,11 @@
 
             app:cardCornerRadius="16dp"
             app:cardBackgroundColor="#FFFFFF"
-            />
+            >
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <ImageView
             android:id="@+id/star"
@@ -847,6 +851,30 @@
             android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_transparent_chickenburger"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@android:color/transparent"
+        android:elevation="10dp"
+        android:text="Cliquez ici"
+        app:layout_constraintBottom_toBottomOf="@id/carre_1"
+        app:layout_constraintLeft_toLeftOf="@id/carre_1"
+        app:layout_constraintRight_toRightOf="@id/carre_1"
+        app:layout_constraintTop_toTopOf="@id/carre_1" />
+    <Button
+        android:id="@+id/button_transparent_cheseburger"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@android:color/transparent"
+        android:elevation="10dp"
+        android:text="Cliquez ici"
+        app:layout_constraintBottom_toBottomOf="@id/carre_2"
+        app:layout_constraintLeft_toLeftOf="@id/carre_2"
+        app:layout_constraintRight_toRightOf="@id/carre_2"
+        app:layout_constraintTop_toTopOf="@id/carre_2" />
+
 
 
 
