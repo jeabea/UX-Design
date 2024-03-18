@@ -280,6 +280,30 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/achat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="800dp"
+        android:elevation="15dp"
+        android:fontFamily="@font/dm_sans_regular"
+        android:text="back to my shopping "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/buttonGoToHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/achat"
+        app:layout_constraintLeft_toLeftOf="@id/achat"
+        app:layout_constraintRight_toRightOf="@id/achat"
+        app:layout_constraintTop_toTopOf="@id/achat" />
+
     <Button
         android:id="@+id/buttonGoToBeforePage3"
         android:layout_width="wrap_content"
@@ -290,6 +314,7 @@
         app:layout_constraintLeft_toLeftOf="@id/retour_page_arr"
         app:layout_constraintRight_toRightOf="@id/retour_page_arr"
         app:layout_constraintTop_toTopOf="@id/retour_page_arr" />
+
 
 
 
