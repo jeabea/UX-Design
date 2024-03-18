@@ -47,7 +47,7 @@ class MainActivity8 : AppCompatActivity() {
 
         val bouton_vers_page = findViewById<Button>(R.id.buttonGoToBeforePage)
         bouton_vers_page.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
     }
