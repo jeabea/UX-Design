@@ -8,22 +8,23 @@
 
     <ImageView
         android:id="@+id/Accueil"
-        android:layout_width="420dp"
-        android:layout_height="857dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/Accueil"
+        android:background="@drawable/accueil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </ImageView>
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/degrade_noir"/>
+        android:background="@drawable/degrade_noir"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/Title"
@@ -32,15 +33,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="400dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Find and Get \nYour Best Food"
         android:textAlignment="textStart"
         android:textColor="#FFFF"
         android:textSize="36dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </TextView>
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
         android:id="@+id/SubTitle"
@@ -50,38 +50,44 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_regular"
+        android:lineHeight="24dp"
         android:text="Find the most delicious food \nwith the best quality and free delivery here"
         android:textAlignment="textStart"
         android:textColor="#FFFF"
         android:textSize="16dp"
-        android:lineHeight="24dp"
         app:layout_constraintStart_toStartOf="@+id/Title"
-        app:layout_constraintTop_toBottomOf="@+id/Title">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/Title"></TextView>
 
-        <Button
-            android:id="@+id/ButtonSuite"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/rond_orange"
-            android:text=""
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SubTitle"
-            app:backgroundTint="#FF9431"/>
 
-        <ImageView
-            android:id="@+id/ArrowIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fleche"
-            app:layout_constraintBottom_toBottomOf="@+id/ButtonSuite"
-            app:layout_constraintEnd_toEndOf="@+id/ButtonSuite"
-            app:layout_constraintStart_toStartOf="@+id/ButtonSuite"
-            app:layout_constraintTop_toTopOf="@+id/ButtonSuite" />
 
+    <Button
+        android:id="@+id/Suite"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="20dp"
+        android:background="@drawable/rond_orange"
+        app:backgroundTint="#FF9431"
+        app:layout_constraintBottom_toBottomOf="@+id/Accueil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubTitle"
+        android:contentDescription="Bouton pour passer à l'authentification"
+        >
+    </Button>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fleche"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/Suite"
+        app:layout_constraintEnd_toEndOf="@+id/Suite"
+        app:layout_constraintStart_toStartOf="@+id/Suite"
+        app:layout_constraintTop_toTopOf="@+id/Suite" />
 
     <ImageView
         android:id="@+id/Droite"
@@ -90,8 +96,8 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rond_orange"
-        app:layout_constraintStart_toStartOf="@+id/ButtonSuite"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonSuite">
+        app:layout_constraintStart_toStartOf="@+id/Suite"
+        app:layout_constraintTop_toBottomOf="@+id/Suite">
 
     </ImageView>
 
@@ -102,27 +108,39 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/rond_gris"
-        app:layout_constraintEnd_toEndOf="@+id/ButtonSuite"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonSuite">
+        app:layout_constraintEnd_toEndOf="@+id/Suite"
+        app:layout_constraintTop_toBottomOf="@+id/Suite">
 
     </ImageView>
 
-    <Button
-        android:id="@+id/Skip"
+    <TextView
+        android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="32dp"
+        android:alpha="0.3"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
         android:text="Skip"
-        android:textAlignment="center"
-        android:textColor="#80FFFFFF"
-        android:textSize="18dp"
-        android:background="null"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonSuite"></Button>
+        android:textColor="#FF9431"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/Suite"
+        app:layout_constraintStart_toStartOf="@id/Suite"
+        app:layout_constraintTop_toBottomOf="@+id/Suite">
+    </TextView>
+
+    <Button
+        android:id="@+id/button_skip"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Cliquez ici"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/skip"
+        app:layout_constraintEnd_toEndOf="@+id/skip"
+        app:layout_constraintStart_toStartOf="@id/skip"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

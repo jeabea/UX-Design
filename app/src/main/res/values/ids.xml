@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button_inscription" type="id" />
+    <item name="Inscription" type="id" />
+    <item name="Connexion" type="id" />
+    <item name="Retour_Accueil" type="id" />
+    <item name="button_connexion" type="id" />
+    <item name="Bouton_Inscription" type="id" />
+</resources>
