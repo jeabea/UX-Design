@@ -1,5 +1,6 @@
 package com.example.projetappdesignv2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -13,35 +14,37 @@ import android.widget.Button
 
 class MainActivity6 : AppCompatActivity() {
 
-    private var counterValue = 1 // Initialiser avec une valeur par défaut
+    private var counterValue = 1
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main6)
 
-        // Vérifier si l'intent contient l'indicateur que le bouton a été cliqué
-        val boutonClique = intent.getBooleanExtra("boutonClique", false)
+        // Récupérer la valeur des rectangles du panier
+        val sharedPreferences = getSharedPreferences("Panier", MODE_PRIVATE)
+        val rectanglesDansPanier = sharedPreferences.getInt("Rectangles", 0)
 
+
+        // Logique pour afficher les rectangles en fonction du nombre enregistré
         val elementAAfficher: RelativeLayout = findViewById(R.id.rectangle)
-
-        if (boutonClique) {
-            // Le bouton a été cliqué dans MainActivity3, afficher les éléments
-            elementAAfficher.visibility = View.VISIBLE
-        } else {
-            // Le bouton n'a pas été cliqué, masquer ou ajuster les éléments comme nécessaire
-            elementAAfficher.visibility = View.GONE
-        }
-        // Vérifier si l'intent contient l'indicateur que le bouton a été cliqué
-        val boutonClique2 = intent.getBooleanExtra("boutonClique2", false)
-
         val elementAAfficher2: RelativeLayout = findViewById(R.id.rectangle2)
 
-        if (boutonClique2) {
-            // Le bouton a été cliqué dans MainActivity3, afficher les éléments
-            elementAAfficher2.visibility = View.VISIBLE
-        } else {
-            // Le bouton n'a pas été cliqué, masquer ou ajuster les éléments comme nécessaire
-            elementAAfficher2.visibility = View.GONE
-        }
+
+
+        elementAAfficher.visibility = if (rectanglesDansPanier > 0) View.VISIBLE else View.GONE
+
+
+
+
+        // Vérifier si l'intent contient l'indicateur que le bouton a été cliqué
+        val boutonClique = intent.getBooleanExtra("boutonClique", false)
+        val boutonClique2 = intent.getBooleanExtra("boutonClique2", false)
+
+
+        elementAAfficher2.visibility = if ( boutonClique2) View.VISIBLE else View.GONE
+
+
+
 
 
 
@@ -65,6 +68,11 @@ class MainActivity6 : AppCompatActivity() {
         }
         val bouton_vers_page = findViewById<Button>(R.id.buttonGoToBeforePage3)
         bouton_vers_page.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
+        val bouton_vers_page2 = findViewById<Button>(R.id.buttonGoToHome)
+        bouton_vers_page2.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }

@@ -38,6 +38,13 @@ class MainActivity3 : AppCompatActivity() {
             val intent = Intent(this, MainActivity6::class.java).apply {
                 putExtra("compteurValue", counterValue)
                 putExtra("boutonClique", true)
+                putExtra("boutonClique2", false)
+            val sharedPreferences = getSharedPreferences("Panier", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            val rectanglesDansPanier = sharedPreferences.getInt("Rectangles", 0)
+            editor.putInt("Rectangles", rectanglesDansPanier + 1)
+            editor.apply()
+
             }
             startActivity(intent)
         }
