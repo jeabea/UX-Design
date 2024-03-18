@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.content.Intent
+import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
 
 
 class MainActivity10 : AppCompatActivity() {
@@ -23,13 +25,33 @@ class MainActivity10 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val connexion: Button = findViewById(R.id.Connexion)
-        connexion.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
+
+
+        val usernameEditText = findViewById<TextInputEditText>(R.id.usernameEditText)
+        val passwordEditText = findViewById<TextInputEditText>(R.id.passwordEditText)
+        val loginButton = findViewById<Button>(R.id.Connexion)
+
+        loginButton.setOnClickListener {
+            val username = usernameEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+
+            if (validateUser(username, password)) {
+                // Passer à la page suivante
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
+            } else {
+                // Afficher un message d'erreur
+                Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }
+
+    private fun validateUser(username: String, password: String): Boolean {
+        val dbHelper = UserDBHelper(this)
+        return dbHelper.userExists(username, password)
+    }
+
 
 }
 
