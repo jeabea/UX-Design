@@ -21,5 +21,11 @@ class MainActivity4 : AppCompatActivity() {
             val intent = Intent(this, MainActivity5::class.java)
             startActivity(intent)
         }
+
+        val bouton_vers_margarita = findViewById<Button>(R.id.button_transparent_margarita)
+        bouton_vers_margarita.setOnClickListener {
+            val intent = Intent(this, MainActivity8::class.java)
+            startActivity(intent)
+        }
     }
 }
