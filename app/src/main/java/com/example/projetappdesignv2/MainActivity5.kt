@@ -21,5 +21,11 @@ class MainActivity5 : AppCompatActivity() {
             val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
+        val bouton_vers_basic_sandwich = findViewById<Button>(R.id.button_transparent_sandwich )
+        bouton_vers_basic_sandwich.setOnClickListener {
+            val intent = Intent(this, MainActivity9::class.java)
+            startActivity(intent)
+        }
+
     }
 }

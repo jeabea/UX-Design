@@ -4,4 +4,6 @@
     <item name="Delivery" type="id" />
     <item name="cheseBurgerText" type="id" />
     <item name="buttonGoToNextPage2" type="id" />
+    <item name="button_transparent_chickenburger" type="id" />
+    <item name="button_transparent_cheseburger" type="id" />
 </resources>

@@ -430,6 +430,18 @@
 
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/button_transparent_sandwich"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@android:color/transparent"
+        android:elevation="10dp"
+        android:text="Cliquez ici"
+        app:layout_constraintBottom_toBottomOf="@id/carre_1"
+        app:layout_constraintLeft_toLeftOf="@id/carre_1"
+        app:layout_constraintRight_toRightOf="@id/carre_1"
+        app:layout_constraintTop_toTopOf="@id/carre_1" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
