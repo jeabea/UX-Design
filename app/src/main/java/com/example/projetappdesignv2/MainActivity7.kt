@@ -10,13 +10,13 @@ import android.widget.TextView
 
 
 
-class MainActivity3 : AppCompatActivity() {
+class MainActivity7: AppCompatActivity() {
 
     private var counterValue = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_main7)
 
         val textViewCounter: TextView = findViewById(R.id.textViewCounter)
 
@@ -33,12 +33,12 @@ class MainActivity3 : AppCompatActivity() {
                 textViewCounter.text = counterValue.toString()
             }
         }
-        val buttonGoToNextPage: Button = findViewById(R.id.buttonGoToNextPage)
+        val buttonGoToNextPage: Button = findViewById(R.id.buttonGoToNextPage2)
         buttonGoToNextPage.setOnClickListener {
             val intent = Intent(this, MainActivity6::class.java).apply {
                 putExtra("compteurValue", counterValue)
-                putExtra("boutonClique", true)
-                putExtra("boutonClique2", false)
+                putExtra("boutonClique2", true)
+                putExtra("boutonClique", false)
             val sharedPreferences = getSharedPreferences("Panier", MODE_PRIVATE)
             val editor = sharedPreferences.edit()
             val rectanglesDansPanier = sharedPreferences.getInt("Rectangles", 0)
@@ -48,12 +48,14 @@ class MainActivity3 : AppCompatActivity() {
             }
             startActivity(intent)
         }
-
-        val bouton_vers_page = findViewById<Button>(R.id.buttonGoToBeforePage)
+        val bouton_vers_page = findViewById<Button>(R.id.buttonGoToBeforePage2)
         bouton_vers_page.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
+
+
+
     }
 }
 

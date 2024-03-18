@@ -7,16 +7,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 
-
-
-
-class MainActivity3 : AppCompatActivity() {
+class MainActivity8 : AppCompatActivity() {
 
     private var counterValue = 1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_main8)
 
         val textViewCounter: TextView = findViewById(R.id.textViewCounter)
 
@@ -39,11 +35,11 @@ class MainActivity3 : AppCompatActivity() {
                 putExtra("compteurValue", counterValue)
                 putExtra("boutonClique", true)
                 putExtra("boutonClique2", false)
-            val sharedPreferences = getSharedPreferences("Panier", MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            val rectanglesDansPanier = sharedPreferences.getInt("Rectangles", 0)
-            editor.putInt("Rectangles", rectanglesDansPanier + 1)
-            editor.apply()
+                val sharedPreferences = getSharedPreferences("Panier", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                val rectanglesDansPanier = sharedPreferences.getInt("Rectangles", 0)
+                editor.putInt("Rectangles", rectanglesDansPanier + 1)
+                editor.apply()
 
             }
             startActivity(intent)
@@ -51,9 +47,8 @@ class MainActivity3 : AppCompatActivity() {
 
         val bouton_vers_page = findViewById<Button>(R.id.buttonGoToBeforePage)
         bouton_vers_page.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
     }
 }
-

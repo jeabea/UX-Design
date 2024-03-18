@@ -6,4 +6,11 @@
     <item name="Retour_Accueil" type="id" />
     <item name="button_connexion" type="id" />
     <item name="Bouton_Inscription" type="id" />
+    <item name="retour_page_arr" type="id" />
+    <item name="Delivery" type="id" />
+    <item name="cheseBurgerText" type="id" />
+    <item name="buttonGoToNextPage2" type="id" />
+    <item name="button_transparent_chickenburger" type="id" />
+    <item name="button_transparent_cheseburger" type="id" />
+
 </resources>
