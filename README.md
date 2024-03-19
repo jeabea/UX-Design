@@ -27,6 +27,8 @@ Après avoir établi les pages des catégories, j'ai assisté Jeanne dans la cr�
 
 Par la suite, j'ai développé une base de données SQLite, facilitant l'intégration des fonctionnalités d'inscription et de connexion gérées par Jade.  En effet, notre application contenant une partie Connexion et une partie Inscription, il a fallu en premier lieu créer une base de donnée user avec en clé primaire le username rentré lors de l'inscription, le mail utilisateur, ainsi que le mot de passe. Une fois la base de donnée crée, il a été facile de créer une fonction permettant de prendre en entrée les données entrées par les utilisateurs dans des TextInputEditor, et les ajouter dans notre base de donnée. Un mécanisme de validation assure que tous les champs sont remplis avant de procéder à la création du compte, afin d'éviter toute erreur dans la base de données. En cas de succès, un message confirme la création du compte, après quoi l'utilisateur est redirigé vers la page de connexion. L'authentification est alors validée si les informations fournies correspondent à un enregistrement existant dans notre base, permettant ainsi l'accès à l'application. En cas d'échec, un message d'erreur est affiché.
 
+Finalement, une fois la page profil crée, j'ai lié le design réalisé par jade à la base de donnée, permettant ainsi d'afficher sur le profil, le nom d'utilisateur de la personne connectée ainsi que son mail et son mot de passe. Permettant ainsi d'avoir une vue globale du profil crée par l'utilisateur connecté. 
+
 ### Jeanne
 
 
