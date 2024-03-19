@@ -16,7 +16,17 @@ Avec une vision claire de la structure et des fonctionnalités de notre applicat
 
 ## Développement de l'application - Mini rapport individuel 
 ### Jade
+
+
 ### Andrea
+Dès l'initiation de notre projet, nous avons procédé à une répartition équitable des tâches entre nous, m'attribuant la responsabilité de la conception de la page de présentation des plats. Pour ce faire, j'ai élaboré une page d'introduction, utilisant le modèle Figma comme guide pour notre charte graphique. Cette approche m'a permis de créer efficacement une page en XML dédiée à la première catégorie de plats (les hamburgers) et d'implémenter des boutons interactifs en Kotlin pour naviguer vers les autres catégories de plats (pizzas et sandwichs). Nous avons décidé de limiter notre sélection à quatre plats répartis dans trois catégories distinctes. Cette décision visait à démontrer la fonctionnalité des catégories sans nécessiter une base de données exhaustive et un travail répétitif.
+
+Après avoir établi les pages des catégories, j'ai assisté Jeanne dans la création des pages d'informations détaillées pour chaque plat, en prenant en charge spécifiquement celles concernant les pizzas et les sandwiches. Ces pages ont été intégrées à la navigation principale, permettant un accès facile depuis la page d'accueil des plats en cliquant dessus. 
+
+
+
+Par la suite, j'ai développé une base de données SQLite, facilitant l'intégration des fonctionnalités d'inscription et de connexion gérées par Jade.  En effet, notre application contenant une partie Connexion et une partie Inscription, il a fallu en premier lieu créer une base de donnée user avec en clé primaire le username rentré lors de l'inscription, le mail utilisateur, ainsi que le mot de passe. Une fois la base de donnée crée, il a été facile de créer une fonction permettant de prendre en entrée les données entrées par les utilisateurs dans des TextInputEditor, et les ajouter dans notre base de donnée. Un mécanisme de validation assure que tous les champs sont remplis avant de procéder à la création du compte, afin d'éviter toute erreur dans la base de données. En cas de succès, un message confirme la création du compte, après quoi l'utilisateur est redirigé vers la page de connexion. L'authentification est alors validée si les informations fournies correspondent à un enregistrement existant dans notre base, permettant ainsi l'accès à l'application. En cas d'échec, un message d'erreur est affiché.
+
 ### Jeanne
 
 
