@@ -55,13 +55,13 @@
     <RelativeLayout
         android:layout_width="390dp"
         android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
         android:background="@drawable/rectangle_bord"
         android:elevation="30dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:id="@+id/rectangle"
         tools:ignore="MissingConstraints">
@@ -91,7 +91,7 @@
 
             />
         <ImageButton
-            android:id="@+id/my_round_button2"
+            android:id="@+id/my_round_button23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="29dp"
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="310dp"
             android:layout_marginTop="33dp"
-            android:text="1"
+            android:text="0"
             android:fontFamily="@font/dm_sans_bold"
             android:elevation="15dp"
             android:textSize="24sp"
@@ -169,13 +169,13 @@
     <RelativeLayout
         android:layout_width="390dp"
         android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
         android:background="@drawable/rectangle_bord"
         android:elevation="30dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="15dp"
         android:id="@+id/rectangle2"
         tools:ignore="MissingConstraints">
@@ -221,7 +221,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="310dp"
             android:layout_marginTop="33dp"
-            android:text="1"
+            android:text="0"
             android:fontFamily="@font/dm_sans_bold"
             android:elevation="15dp"
             android:textSize="24sp"
@@ -280,19 +280,246 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rectangle_bord"
+        android:elevation="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/rectangle3"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/fond_beige_button3"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_rectangle"
+            >
+
+
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/my_round_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/button_moins"
+            android:scaleType="center"
+
+            />
+        <ImageButton
+            android:id="@+id/my_round_button33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="336dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/button_plus"
+            android:scaleType="center"
+
+            />
+        <TextView
+            android:id="@+id/textViewCounter3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="33dp"
+            android:text="0"
+            android:fontFamily="@font/dm_sans_bold"
+            android:elevation="15dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:elevation="15dp"
+            android:src="@drawable/pizza_petit" />
+
+        <TextView
+            android:id="@+id/margPizzaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="18dp"
+            android:elevation="22dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="Margerita"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/rect_1"
+            app:layout_constraintTop_toTopOf="@id/rect_1"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="38dp"
+            android:elevation="30dp"
+            >
+
+            <TextView
+                android:id="@+id/textViewDollar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="$ 15"
+                android:textColor="#FF9431"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textViewCents3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:text=".00"
+                android:textColor="#FF9431"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!-- D'autres éléments peuvent être ajoutés ici et positionnés par rapport à rect_1 ou aux bords du RelativeLayout -->
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        android:background="@drawable/rectangle_bord"
+        android:elevation="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/rectangle4"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/fond_beige_button4"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_rectangle"
+            >
+
+
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/my_round_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/button_moins"
+            android:scaleType="center"
+
+            />
+        <ImageButton
+            android:id="@+id/my_round_button44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="336dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/button_plus"
+            android:scaleType="center"
+
+            />
+        <TextView
+            android:id="@+id/textViewCounter4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="33dp"
+            android:text="0"
+            android:fontFamily="@font/dm_sans_bold"
+            android:elevation="15dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:elevation="15dp"
+            android:src="@drawable/sandwich_petit" />
+
+        <TextView
+            android:id="@+id/SandwText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="18dp"
+            android:elevation="22dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="Basic Sandwich"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/rect_1"
+            app:layout_constraintTop_toTopOf="@id/rect_1"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="38dp"
+            android:elevation="30dp"
+            >
+
+            <TextView
+                android:id="@+id/textViewDollar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="$ 15"
+                android:textColor="#FF9431"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textViewCent4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:text=".00"
+                android:textColor="#FF9431"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!-- D'autres éléments peuvent être ajoutés ici et positionnés par rapport à rect_1 ou aux bords du RelativeLayout -->
+
+    </RelativeLayout>
     <TextView
         android:id="@+id/achat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="800dp"
+        android:layout_marginTop="600dp"
         android:elevation="15dp"
         android:fontFamily="@font/dm_sans_regular"
         android:text="back to my shopping "
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
         tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/buttonGoToHome"
         android:layout_width="0dp"
@@ -300,9 +527,11 @@
         android:background="@android:color/transparent"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="@id/achat"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@id/achat"
         app:layout_constraintRight_toRightOf="@id/achat"
-        app:layout_constraintTop_toTopOf="@id/achat" />
+        app:layout_constraintTop_toTopOf="@id/achat"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonGoToBeforePage3"

@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/burger_1"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +103,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         android:background="@drawable/recatngle_blanc"
         android:elevation="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -378,7 +378,7 @@
         android:layout_width="280dp"
         android:layout_height="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="460dp"
         android:elevation="17dp"
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintTop_toTopOf="@id/view">
@@ -390,6 +390,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:elevation="18dp"
+
             android:src="@drawable/rounded_rectangle_orange"
             android:importantForAccessibility="no" />
 
