@@ -12,6 +12,7 @@ import android.widget.DatePicker
 import android.app.DatePickerDialog
 import android.content.Context
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import java.util.*
 
@@ -23,6 +24,12 @@ class MainActivity12 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main12)
+
+        val bouton_vers_home = findViewById<Button>(R.id.button_home)
+        bouton_vers_home.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
 
         val birthdayEditText = findViewById<TextInputEditText>(R.id.birthdayEditText)
         val birthdayLayout = findViewById<TextInputLayout>(R.id.birthdayTextInputLayout)
