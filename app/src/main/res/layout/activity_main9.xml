@@ -92,18 +92,18 @@
         android:layout_width="280dp"
         android:layout_height="250dp"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/sandwich_petit"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         android:background="@drawable/recatngle_blanc"
         android:elevation="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -378,7 +378,7 @@
         android:layout_width="280dp"
         android:layout_height="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="460dp"
         android:elevation="17dp"
         app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintTop_toTopOf="@id/view">

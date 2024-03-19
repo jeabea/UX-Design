@@ -28,10 +28,9 @@ class MainActivity6 : AppCompatActivity() {
         // Logique pour afficher les rectangles en fonction du nombre enregistré
         val elementAAfficher: RelativeLayout = findViewById(R.id.rectangle)
         val elementAAfficher2: RelativeLayout = findViewById(R.id.rectangle2)
+        val elementAAfficher3: RelativeLayout = findViewById(R.id.rectangle3)
+        val elementAAfficher4: RelativeLayout = findViewById(R.id.rectangle4)
 
-
-
-        elementAAfficher.visibility = if (rectanglesDansPanier > 0) View.VISIBLE else View.GONE
 
 
 
@@ -41,7 +40,7 @@ class MainActivity6 : AppCompatActivity() {
         val boutonClique2 = intent.getBooleanExtra("boutonClique2", false)
 
 
-        elementAAfficher2.visibility = if ( boutonClique2) View.VISIBLE else View.GONE
+
 
 
 
