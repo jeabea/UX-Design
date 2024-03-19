@@ -1,10 +1,12 @@
 package com.example.projetappdesignv2
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 
@@ -35,6 +37,14 @@ class MainActivity10 : AppCompatActivity() {
             val username = usernameEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
+            // Récupération du nom d'utilisateur depuis l'EditText et sauvegarde dans SharedPreferences
+            val sharedPreferences = getSharedPreferences("MainActivity12", Context.MODE_PRIVATE)
+            sharedPreferences.edit().putString("USERNAME", username).apply()
+
+            //Récupérer le nom d'utilisateur depuis SharedPreferences
+            val usernameFromPrefs = sharedPreferences.getString("USERNAME", "Utilisateur Inconnu")
+            Log.d("MainActivity12", "Username: $usernameFromPrefs")
+
             if (validateUser(username, password)) {
                 // Passer à la page suivante
                 val intent = Intent(this, MainActivity2::class.java)
@@ -43,7 +53,13 @@ class MainActivity10 : AppCompatActivity() {
                 // Afficher un message d'erreur
                 Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
+
+
         }
+
+
+
+
 
     }
 

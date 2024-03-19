@@ -1,5 +1,6 @@
 package com.example.projetappdesignv2
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,12 +10,16 @@ import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat
 import android.widget.DatePicker
 import android.app.DatePickerDialog
+import android.content.Context
+import android.util.Log
+import android.widget.TextView
 import java.util.*
 
 class MainActivity12 : AppCompatActivity() {
     private val REQUEST_CODE_MAIN_13 = 13
     private lateinit var passwordEditText: TextInputEditText
 
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main12)
@@ -70,6 +75,47 @@ class MainActivity12 : AppCompatActivity() {
             val intent = Intent(this, MainActivity13::class.java)
             startActivityForResult(intent, REQUEST_CODE_MAIN_13)
         }
+
+        val sharedPreferences = getSharedPreferences("MainActivity12", Context.MODE_PRIVATE)
+        val username = sharedPreferences.getString("USERNAME", "Utilisateur Inconnu")
+
+        val usernameTextView = findViewById<TextView>(R.id.usernameTextView)
+        usernameTextView.text = username
+
+        val usernameInputEditText = findViewById<TextInputEditText>(R.id.usernameEditText)
+        usernameInputEditText.setText(username)
+
+
+        username?.let {
+            val dbHelper = UserDBHelper(this)
+            val userCredentials = dbHelper.getUserCredentials(it)
+            if (userCredentials != null) {
+                val email = userCredentials.email
+                val password = userCredentials.password
+
+                val emailInputEditText = findViewById<TextInputEditText>(R.id.emailEditText)
+                emailInputEditText.setText(email)
+
+                val passwordInputEditText = findViewById<TextInputEditText>(R.id.passwordEditText)
+                passwordInputEditText.setText(password)
+
+                // Utiliser userCredentials.email et userCredentials.password ici
+                Log.d("MainActivity", "Email: ${userCredentials.email}, Password: ${userCredentials.password}")
+            } else {
+                // L'utilisateur n'a pas été trouvé dans la base de données
+                Log.d("MainActivity", "Utilisateur non trouvé")
+            }
+        } ?: run {
+            // username est null, gérer ce cas
+            Log.d("MainActivity", "utilisateur non trouvé")
+        }
+
+
+
+
+
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
