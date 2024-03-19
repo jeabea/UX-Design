@@ -57,10 +57,41 @@ class UserDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         return userExists
     }
 
+    fun getUserCredentials(username: String): UserCredentials? {
+        val db = this.readableDatabase
 
+        // Définir les colonnes que vous souhaitez récupérer
+        val projection = arrayOf(UserContract.UserEntry.COLUMN_NAME_EMAIL, UserContract.UserEntry.COLUMN_NAME_PASSWORD)
 
+        // Filtrer les résultats WHERE "username" = 'username donné'
+        val selection = "${UserContract.UserEntry.COLUMN_NAME_USERNAME} = ?"
+        val selectionArgs = arrayOf(username)
+
+        val cursor = db.query(
+            UserContract.UserEntry.TABLE_NAME,   // La table à interroger
+            projection,             // Les colonnes à retourner
+            selection,              // La colonne pour la clause WHERE
+            selectionArgs,          // Les valeurs pour la clause WHERE
+            null,          // Ne pas grouper les lignes
+            null,           // Ne pas filtrer par groupe de lignes
+            null           // L'ordre du tri
+        )
+
+        if (cursor.moveToFirst()) {
+            val email = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_NAME_EMAIL))
+            val password = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_NAME_PASSWORD))
+            cursor.close()
+            return UserCredentials(username, email, password)
+        } else {
+            cursor.close()
+            return null // L'utilisateur n'a pas été trouvé
+        }
+    }
 
 }
+
+data class UserCredentials(val username: String, val email: String, val password: String)
+
 
 object UserContract {
     object UserEntry {

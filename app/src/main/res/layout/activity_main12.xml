@@ -74,13 +74,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/usernameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="Jade Moévi"
             android:textColor="@color/white"
             android:textSize="30dp">
 
@@ -118,7 +118,7 @@
                 android:textColorHint="@color/black"
                 app:drawableTint="#FF9431"
                 android:enabled="false"
-                android:text="Jade Moevi" />
+                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -207,7 +207,6 @@
                 android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:drawableStart="@drawable/mail"
-                android:text="jade.moevi@edu.devinci.fr"
                 android:enabled="false"/>
         </com.google.android.material.textfield.TextInputLayout>
 
