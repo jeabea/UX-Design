@@ -30,11 +30,14 @@ Par la suite, j'ai développé une base de données SQLite, facilitant l'intégr
 Finalement, une fois la page profil crée, j'ai lié le design réalisé par jade à la base de donnée, permettant ainsi d'afficher sur le profil, le nom d'utilisateur de la personne connectée ainsi que son mail et son mot de passe. Permettant ainsi d'avoir une vue globale du profil crée par l'utilisateur connecté. 
 
 ### Jeanne
-Pour notre application de livraison de nourriture, j'ai participé auxs pages de présentation des plats. Je me suis concentrée sur les burgers, en créant une interface simple où l'utilisateur peut voir le plat, ajouter la quantité souhaitée grâce à un compteur et le mettre dans son panier. J'ai également intégré une option pour revenir en arrière à tout moment. Enfin, j’ai relié la page d’accueil aux différentes pages de burgers à l'aide de boutons.
+Ma contribution s'est principalement portée sur l'élaboration des interfaces pour la présentation des plats, avec un focus particulier sur les pages dédiées aux hamburgers et l'élaboration de la page panier. En utilisant Kotlin et XML pour le design, j'ai créé une page où les utilisateurs peuvent visualiser les détails du burger, ajuster la quantité via un système de compteur et les ajouter à leur panier. J'ai également intégré une option pour revenir en arrière à tout moment. Enfin, j’ai relié la page d’accueil aux différentes pages de burgers à l'aide de boutons.
 
-En travaillant sur les pages des burgers, j'ai établi un standard que Andrea a ensuite adapté pour les pages des pizzas et des sandwiches. Cela nous a aidées à garder une uniformité dans l'apparence et la fonctionnalité de l'application.
+Le travail sur les hamburgers a servi de modèle pour le développement des pages des autres catégories de plats, assurant une cohérence visuelle et fonctionnelle dans l'application. J'ai également mis en œuvre la page du panier.Ici, si un utilisateur choisit trois burgers, par exemple, il verra le total se mettre à jour automatiquement dans son panier. Face aux difficultés rencontrées avec l'utilisation d'une base de données pour le panier et les tentatives infructueuses d'implémentation via "SharedPreferences", j'ai finalement choisi une approche plus directe : inclure tous les articles par défaut avec un compteur initialisé à zéro. Ainsi, l'utilisateur peut ajuster la quantité désirée pour chaque article selon ses besoins.
 
-J'ai aussi mis au point la page du panier. Ici, si un utilisateur choisit trois burgers, par exemple, il verra le total se mettre à jour automatiquement. Face aux difficultés rencontrées avec l'utilisation d'une base de données pour le panier et les tentatives infructueuses d'implémentation via "SharedPreferences", j'ai finalement choisi une approche plus directe : inclure tous les articles par défaut avec un compteur initialisé à zéro. Ainsi, l'utilisateur peut ajuster la quantité désirée pour chaque article selon ses besoins.
+
+
+
+
 
 
 
