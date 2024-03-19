@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity12">
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/bas_de_page"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="25dp">
+
 
             <ImageView
                 android:id="@+id/home"
@@ -64,6 +66,17 @@
                 app:layout_constraintEnd_toEndOf="@+id/bas_de_page"
                 app:layout_constraintTop_toTopOf="@+id/bas_de_page" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button_home"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="50dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Cliquez ici"
+            android:elevation="10dp"/>
+
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
