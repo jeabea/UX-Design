@@ -16,6 +16,18 @@ Avec une vision claire de la structure et des fonctionnalités de notre applicat
 
 ## Développement de l'application - Mini rapport individuel 
 ### Jade
+#### 1. Interface Utilisateur :
+* Pour l'interface utilisateur, j'ai opté pour une approche utilisant à la fois RelativeLayout et LinearLayout. RelativeLayout a été utilisé pour positionner les éléments de manière relative les uns par rapport aux autres, offrant ainsi une grande flexibilité dans la conception de l'interface. LinearLayout a été utilisé pour organiser verticalement les éléments de l'interface, facilitant la disposition des vues.
+
+#### 2. Changement de mot de passe :
+* Pour l'écran de modification du mot de passe, j'ai choisi d'utiliser TextInputLayout et TextInputEditText fournis par la bibliothèque Material Components. Ces composants offrent une expérience utilisateur améliorée en fournissant des fonctionnalités telles que la validation en temps réel, les messages d'erreur personnalisés et la visibilité du texte du mot de passe. De plus, l'utilisation de passwordToggleEnabled a permis aux utilisateurs de masquer ou d'afficher le texte du mot de passe.
+
+#### 3. Profil Utilisateur :
+* Dans la page du profil utilisateur, j'ai conçu une interface claire et concise en utilisant LinearLayout pour organiser les informations du profil. J'ai choisi d'afficher les informations essentielles telles que le nom, l'adresse e-mail et le numéro de téléphone dans des TextInputLayouts pour une présentation uniforme. De plus, j'ai intégré des boutons d'édition pour permettre aux utilisateurs de modifier facilement leurs informations de profil.
+
+#### 4. Navigation :
+* Pour la navigation, j'ai inclus des boutons de retour à l'accueil et de retour à l'écran de connexion. Ces boutons ont été implémentés à l'aide de ImageButton pour fournir une expérience utilisateur cohérente avec le reste de l'application. J'ai également utilisé des icônes et des couleurs appropriées pour améliorer la convivialité de la navigation.
+
 
 
 ### Andrea
